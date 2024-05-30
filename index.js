@@ -393,8 +393,8 @@ let Pilalibros = [
 }
 
 function EjecutarMenu() {
-    let x = Menu()
-    switch (x) {
+    let guardar = Menu()
+    switch (guardar) {
     case 1:
         AgregarLibro()
         EjecutarMenu2()
@@ -433,8 +433,8 @@ function Menu2() {
 
  function EjecutarMenu2() {
     let continuar
-    let x = Menu2()
-    switch (x) {
+    let guardar = Menu2()
+    switch (guardar) {
         case 1:
             continuar = true
             break;
