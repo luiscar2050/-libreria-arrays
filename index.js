@@ -377,7 +377,7 @@ let Pilalibros = [
  
  function VerLibros() {
      console.log('pila actual de libros');
-     console.log(libros);
+     console.log(Pilalibros);
  }
 
  function Menu() {
