@@ -4,7 +4,7 @@ let Pilalibros = [
           autor: "Homero",
           genero: "Epopeya, Literatura clásica",
           idioma: "Español",
-          precio: 20.99,
+          precio: 50.99,
           formato: "Tapa dura",
           isbn: "978-8497648452",
           descripcion: "es un poema épico que relata el regreso del héroe griego Ulises a su hogar en Ítaca después de la Guerra de Troya. ",
@@ -21,7 +21,7 @@ let Pilalibros = [
         autor: "George Orwell",
         genero: "Distopía, Ficción política",
         idioma: "Español",
-        precio: 12.99,
+        precio: 52.99,
         formato: "Tapa dura",
         isbn: "978-8423325394",
         descripcion: "es una novela distópica que presenta un mundo totalitario en el que el gobierno controla todos los aspectos de la vida de los ciudadanos.",
@@ -382,7 +382,7 @@ let Pilalibros = [
 
  function Menu() {
     menu = 'Menu libreria\n\n'
-    menu += '1: agregar nuevo libro\n'
+    menu += '1: Agregar nuevo libro\n'
     menu += '2: Eliminar libro\n'
     menu += '3: Mostrar pila de libros\n'
     menu += '4: Mostrar menu listar libros\n'
@@ -477,8 +477,8 @@ function Menu3() {
 }
 
 function EjecutarMenu3() {
-   let x = Menu3()
-   switch (x) {
+   let guardar = Menu3()
+   switch (guardar) {
    case 1:
        console.table(TITULO)
        EjecutarMenu2()
@@ -547,8 +547,8 @@ function Menu4() {
 }
 
 function EjecutarMenu4() {
-   let x = Menu4()
-   switch (x) {
+   let guardar = Menu4()
+   switch (guardar) {
    case 1:
        console.table(LibrosPrecio50)
        EjecutarMenu2()
@@ -670,7 +670,6 @@ function Descuento() {
        return {
            ...libro,
            descuento: 20,
-           precio_final: libro.precio - (libro.precio * 0.2)
        };
    });
 
@@ -681,7 +680,6 @@ function Descuento() {
            editorial: libro.editorial, 
            precio: libro.precio,
            descuento: libro.descuento,
-           precio_final: libro.precio_final
        };
    });
 
