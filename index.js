@@ -387,14 +387,15 @@ let Pilalibros = [
     menu += '3: Mostrar pila de libros\n'
     menu += '4: Mostrar menu listar libros\n'
     menu += '5: Mostrar menu resumenes libros\n'
+    menu += '6: funcionalidades de este segmento'
     let codigo = parseInt(prompt(menu))
 
     return codigo
 }
 
 function EjecutarMenu() {
-    let guardar = Menu()
-    switch (guardar) {
+    let guardarMenu = Menu()
+    switch (guardarMenu) {
     case 1:
         AgregarLibro()
         EjecutarMenu2()
@@ -413,6 +414,9 @@ function EjecutarMenu() {
    case 5:
        EjecutarMenu4()
        break;
+    case 6:
+        EjecutarMenu5()
+        break;
     default: 
         false;
         break;
@@ -748,5 +752,214 @@ Pilalibros.filter(function(libros){
    }
 })
 .sort((a,b) => b.precio - a.precio)
+
+function Menu5() {
+    menu = 'Menu listar libros\n\n'
+    menu += '1: Buscar un objeto del array por titulo\n'
+    menu += '2: Buscar un objeto del array por autor\n'
+    menu += '3: Buscar un objeto del array por fecha de publicación\n'
+    menu += '4: Buscar un objeto del array por genero.\n'
+    menu += '5: Buscar un objeto del array por idioma.\n'
+    menu += '6: Buscar un objeto del array por formato.\n'
+    menu += '7: Buscar un objeto del array por estado.\n'
+    menu += '8: Buscar un objeto del array por isbn.\n'
+    menu += '9: Buscar un objeto del array por precio.\n'
+    menu += '10: Buscar un objeto del array por peso.\n'
+    menu += 'elija una opcion\n'
+    let codigo = parseInt(prompt(menu))
+ 
+    return codigo
+ }
+
+ function EjecutarMenu5() {
+    let guardar = Menu5()
+    switch (guardar) {
+    case 1:
+        BuscarPorTitulo()
+        EjecutarMenu2()
+        break;
+    case 2:
+        BuscarPorAutor
+        EjecutarMenu2()
+        break; 
+    case 3:
+        BuscarPorFecha
+        EjecutarMenu2()
+        break;
+    case 4:
+        BuscarPorGenero
+        EjecutarMenu2()
+        break;
+    case 5:
+        BuscarPorIdioma
+        EjecutarMenu2()
+        break;
+    case 6:
+        BuscarPorGenero
+        EjecutarMenu2()
+        break;
+    case 7:
+        BuscarPorEstado
+        EjecutarMenu2()
+        break;  
+    case 8:
+        BuscarPorIsbn
+        EjecutarMenu2()
+        break;
+    case 9:
+        BuscarPorPrecio
+        EjecutarMenu2()
+        break;
+    case 10:
+        BuscarPorPeso
+        EjecutarMenu2()
+        break;
+    default: 
+        false;
+        break;
+    }
+ }
+
+ function BuscarPorTitulo() {
+    let tituloBuscado = prompt('Ingrese el título del libro que desea buscar:');
+    let libroEncontrado = Pilalibros.find(function(libro) {
+        return libro.titulo.toLowerCase() === tituloBuscado.toLowerCase();
+    });
+
+    if (libroEncontrado) {
+        console.log('Libro encontrado:');
+        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Género: ${libroEncontrado.genero}`);
+    } else {
+        console.log('Libro no encontrado.');
+    }
+}
+
+function BuscarPorAutor() {
+    let autorBuscado = prompt('Ingrese el autor del libro que desea buscar:');
+    let libroEncontrado = Pilalibros.find(function(libro) {
+        return libro.autor.toLowerCase() === autorBuscado.toLowerCase();
+    });
+
+    if (libroEncontrado) {
+        console.log('Libro encontrado:');
+        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Género: ${libroEncontrado.genero}`);
+    } else {
+        console.log('Libro no encontrado.');
+    }
+}
+
+function BuscarPorFecha() {
+    let fechaBuscada = prompt('Ingrese la fecha de publicación del libro que desea buscar (formato: YYYY-MM-DD):');
+    let libroEncontrado = Pilalibros.find(function(libro) {
+        return libro.fechaPublicacion === fechaBuscada;
+    });
+
+    if (libroEncontrado) {
+        console.log('Libro encontrado:');
+        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Fecha: ${libroEncontrado.fecha_publicacion}`);
+    } else {
+        console.log('Libro no encontrado.');
+    }
+}
+
+function BuscarPorGenero() {
+    let generoBuscado = prompt('Ingrese el género del libro que desea buscar:');
+    let libroEncontrado = Pilalibros.find(function(libro) {
+        return libro.genero.toLowerCase() === generoBuscado.toLowerCase();
+    });
+
+    if (libroEncontrado) {
+        console.log('Libro encontrado:');
+        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Género: ${libroEncontrado.genero}`);
+    } else {
+        console.log('Libro no encontrado.');
+    }
+}
+
+function BuscarPorIdioma() {
+    let idiomaBuscado = prompt('Ingrese el idioma del libro que desea buscar:');
+    let libroEncontrado = Pilalibros.find(function(libro) {
+        return libro.idioma.toLowerCase() === idiomaBuscado.toLowerCase();
+    });
+
+    if (libroEncontrado) {
+        console.log('Libro encontrado:');
+        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Género: ${libroEncontrado.genero}, Idioma: ${libroEncontrado.idioma}`);
+    } else {
+        console.log('Libro no encontrado.');
+    }
+}
+
+function BuscarPorFormato() {
+    let formatoBuscado = prompt('Ingrese el formato del libro que desea buscar:');
+    let libroEncontrado = Pilalibros.find(function(libro) {
+        return libro.formato === formatoBuscado;
+    });
+
+    if (libroEncontrado) {
+        console.log('Libro encontrado:');
+        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Género: ${libroEncontrado.genero}, Formato: ${libroEncontrado.formato}`);
+    } else {
+        console.log('Libro no encontrado.');
+    }
+}
+
+function BuscarPorEstado() {
+    let EstadoBuscado = prompt('Ingrese el estado del libro que desea buscar:');
+    let libroEncontrado = Pilalibros.find(function(libro) {
+        return libro.estado.toLowerCase() === EstadoBuscado.toLowerCase();
+    });
+
+    if (libroEncontrado) {
+        console.log('Libro encontrado:');
+        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Estado: ${libroEncontrado.estado}`);
+    } else {
+        console.log('Libro no encontrado.');
+    }
+}
+
+
+function BuscarPorIsbn() {
+    let IsbnBuscado = prompt('Ingrese el isbn del libro que desea buscar:');
+    let libroEncontrado = Pilalibros.find(function(libro) {
+        return libro.isbn.toLowerCase() === IsbnBuscado.toLowerCase();
+    });
+
+    if (libroEncontrado) {
+        console.log('Libro encontrado:');
+        console.Table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Isbn: ${libroEncontrado.isbn}`);
+    } else {
+        console.log('Libro no encontrado.');
+    }
+}
+
+function BuscarPorPrecio() {
+    let PrecioBuscado = prompt('Ingrese el precio del libro que desea buscar:');
+    let libroEncontrado = Pilalibros.find(function(libro) {
+        return libro.precio.toLowerCase() === PrecioBuscado.toLowerCase();
+    });
+
+    if (libroEncontrado) {
+        console.log('Libro encontrado:');
+        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Precio: ${libroEncontrado.precio}`);
+    } else {
+        console.log('Libro no encontrado.');
+    }
+}
+
+function BuscarPorPeso() {
+    let pesoBuscado = prompt('Ingrese el peso del libro que desea buscar (formato: YYYY-MM-DD):');
+    let libroEncontrado = Pilalibros.find(function(libro) {
+        return libro.peso === pesoBuscado;
+    });
+
+    if (libroEncontrado) {
+        console.log('Libro encontrado:');
+        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Género: ${libroEncontrado.genero}, Peso: ${libroEncontrado.peso}`);
+    } else {
+        console.log('Libro no encontrado.');
+    }
+}
+
 
 EjecutarMenu();
