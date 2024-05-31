@@ -779,39 +779,39 @@ function Menu5() {
         EjecutarMenu2()
         break;
     case 2:
-        BuscarPorAutor
+        BuscarPorAutor()
         EjecutarMenu2()
         break; 
     case 3:
-        BuscarPorFecha
+        BuscarPorFecha()
         EjecutarMenu2()
         break;
     case 4:
-        BuscarPorGenero
+        BuscarPorGenero()
         EjecutarMenu2()
         break;
     case 5:
-        BuscarPorIdioma
+        BuscarPorIdioma()
         EjecutarMenu2()
         break;
     case 6:
-        BuscarPorGenero
+        BuscarPorFormato()
         EjecutarMenu2()
         break;
     case 7:
-        BuscarPorEstado
+        BuscarPorEstado()
         EjecutarMenu2()
         break;  
     case 8:
-        BuscarPorIsbn
+        BuscarPorIsbn()
         EjecutarMenu2()
         break;
     case 9:
-        BuscarPorPrecio
+        BuscarPorPrecio()
         EjecutarMenu2()
         break;
     case 10:
-        BuscarPorPeso
+        BuscarPorPeso()
         EjecutarMenu2()
         break;
     default: 
@@ -828,7 +828,20 @@ function Menu5() {
 
     if (libroEncontrado) {
         console.log('Libro encontrado:');
-        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Género: ${libroEncontrado.genero}`);
+        console.table(`Título: ${libroEncontrado.titulo}, 
+        Autor: ${libroEncontrado.autor},
+        Idioma: ${libroEncontrado.idioma}
+        Descripcion: ${libroEncontrado.descripcion}
+        Género: ${libroEncontrado.genero},
+        Precio: ${libroEncontrado.precio},
+        Ubicacion: ${libroEncontrado.ubicacion},
+        Fecha: ${libroEncontrado.fecha_publicacion},
+        Dimensiones: ${libroEncontrado.dimensiones},
+        Peso: ${libroEncontrado.peso},
+        ISBN: ${libroEncontrado.isbn},
+        Estado: ${libroEncontrado.estado},`    
+    );
+
     } else {
         console.log('Libro no encontrado.');
     }
@@ -842,21 +855,45 @@ function BuscarPorAutor() {
 
     if (libroEncontrado) {
         console.log('Libro encontrado:');
-        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Género: ${libroEncontrado.genero}`);
+        console.table(`Título: ${libroEncontrado.titulo}, 
+        Autor: ${libroEncontrado.autor},
+        Idioma: ${libroEncontrado.idioma}
+        Descripcion: ${libroEncontrado.descripcion}
+        Género: ${libroEncontrado.genero},
+        Precio: ${libroEncontrado.precio},
+        Ubicacion: ${libroEncontrado.ubicacion},
+        Fecha: ${libroEncontrado.fecha_publicacion},
+        Dimensiones: ${libroEncontrado.dimensiones},
+        Peso: ${libroEncontrado.peso},
+        ISBN: ${libroEncontrado.isbn},
+        Estado: ${libroEncontrado.estado},`   
+    );
     } else {
         console.log('Libro no encontrado.');
     }
 }
 
 function BuscarPorFecha() {
-    let fechaBuscada = prompt('Ingrese la fecha de publicación del libro que desea buscar (formato: YYYY-MM-DD):');
+    let fechaBuscado = prompt('Ingrese la fecha de publicación del libro que desea buscar:');
     let libroEncontrado = Pilalibros.find(function(libro) {
-        return libro.fechaPublicacion === fechaBuscada;
+        return libro.fecha_publicacion === fechaBuscado;
     });
 
     if (libroEncontrado) {
         console.log('Libro encontrado:');
-        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Fecha: ${libroEncontrado.fecha_publicacion}`);
+        console.table(`Título: ${libroEncontrado.titulo}, 
+        Autor: ${libroEncontrado.autor},
+        Idioma: ${libroEncontrado.idioma}
+        Descripcion: ${libroEncontrado.descripcion}
+        Género: ${libroEncontrado.genero},
+        Precio: ${libroEncontrado.precio},
+        Ubicacion: ${libroEncontrado.ubicacion},
+        Fecha: ${libroEncontrado.fecha_publicacion},
+        Dimensiones: ${libroEncontrado.dimensiones},
+        Peso: ${libroEncontrado.peso},
+        ISBN: ${libroEncontrado.isbn},
+        Estado: ${libroEncontrado.estado},`   
+    );
     } else {
         console.log('Libro no encontrado.');
     }
@@ -870,7 +907,19 @@ function BuscarPorGenero() {
 
     if (libroEncontrado) {
         console.log('Libro encontrado:');
-        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Género: ${libroEncontrado.genero}`);
+        console.table(`Título: ${libroEncontrado.titulo}, 
+        Autor: ${libroEncontrado.autor},
+        Idioma: ${libroEncontrado.idioma}
+        Descripcion: ${libroEncontrado.descripcion}
+        Género: ${libroEncontrado.genero},
+        Precio: ${libroEncontrado.precio},
+        Ubicacion: ${libroEncontrado.ubicacion},
+        Fecha: ${libroEncontrado.fecha_publicacion},
+        Dimensiones: ${libroEncontrado.dimensiones},
+        Peso: ${libroEncontrado.peso},
+        ISBN: ${libroEncontrado.isbn},
+        Estado: ${libroEncontrado.estado},`   
+    );
     } else {
         console.log('Libro no encontrado.');
     }
@@ -884,7 +933,19 @@ function BuscarPorIdioma() {
 
     if (libroEncontrado) {
         console.log('Libro encontrado:');
-        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Género: ${libroEncontrado.genero}, Idioma: ${libroEncontrado.idioma}`);
+        console.table(`Título: ${libroEncontrado.titulo}, 
+        Autor: ${libroEncontrado.autor},
+        Idioma: ${libroEncontrado.idioma}
+        Descripcion: ${libroEncontrado.descripcion}
+        Género: ${libroEncontrado.genero},
+        Precio: ${libroEncontrado.precio},
+        Ubicacion: ${libroEncontrado.ubicacion},
+        Fecha: ${libroEncontrado.fecha_publicacion},
+        Dimensiones: ${libroEncontrado.dimensiones},
+        Peso: ${libroEncontrado.peso},
+        ISBN: ${libroEncontrado.isbn},
+        Estado: ${libroEncontrado.estado},`   
+    );
     } else {
         console.log('Libro no encontrado.');
     }
@@ -898,7 +959,19 @@ function BuscarPorFormato() {
 
     if (libroEncontrado) {
         console.log('Libro encontrado:');
-        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Género: ${libroEncontrado.genero}, Formato: ${libroEncontrado.formato}`);
+        console.table(`Título: ${libroEncontrado.titulo}, 
+        Autor: ${libroEncontrado.autor},
+        Idioma: ${libroEncontrado.idioma}
+        Descripcion: ${libroEncontrado.descripcion}
+        Género: ${libroEncontrado.genero},
+        Precio: ${libroEncontrado.precio},
+        Ubicacion: ${libroEncontrado.ubicacion},
+        Fecha: ${libroEncontrado.fecha_publicacion},
+        Dimensiones: ${libroEncontrado.dimensiones},
+        Peso: ${libroEncontrado.peso},
+        ISBN: ${libroEncontrado.isbn},
+        Estado: ${libroEncontrado.estado},`   
+    );
     } else {
         console.log('Libro no encontrado.');
     }
@@ -912,7 +985,19 @@ function BuscarPorEstado() {
 
     if (libroEncontrado) {
         console.log('Libro encontrado:');
-        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Estado: ${libroEncontrado.estado}`);
+        console.table(`Título: ${libroEncontrado.titulo}, 
+        Autor: ${libroEncontrado.autor},
+        Idioma: ${libroEncontrado.idioma}
+        Descripcion: ${libroEncontrado.descripcion}
+        Género: ${libroEncontrado.genero},
+        Precio: ${libroEncontrado.precio},
+        Ubicacion: ${libroEncontrado.ubicacion},
+        Fecha: ${libroEncontrado.fecha_publicacion},
+        Dimensiones: ${libroEncontrado.dimensiones},
+        Peso: ${libroEncontrado.peso},
+        ISBN: ${libroEncontrado.isbn},
+        Estado: ${libroEncontrado.estado},`   
+    );
     } else {
         console.log('Libro no encontrado.');
     }
@@ -927,35 +1012,70 @@ function BuscarPorIsbn() {
 
     if (libroEncontrado) {
         console.log('Libro encontrado:');
-        console.Table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Isbn: ${libroEncontrado.isbn}`);
+        console.table(`Título: ${libroEncontrado.titulo}, 
+        Autor: ${libroEncontrado.autor},
+        Idioma: ${libroEncontrado.idioma}
+        Descripcion: ${libroEncontrado.descripcion}
+        Género: ${libroEncontrado.genero},
+        Precio: ${libroEncontrado.precio},
+        Ubicacion: ${libroEncontrado.ubicacion},
+        Fecha: ${libroEncontrado.fecha_publicacion},
+        Dimensiones: ${libroEncontrado.dimensiones},
+        Peso: ${libroEncontrado.peso},
+        ISBN: ${libroEncontrado.isbn},
+        Estado: ${libroEncontrado.estado},`   
+    );
     } else {
         console.log('Libro no encontrado.');
     }
 }
 
 function BuscarPorPrecio() {
-    let PrecioBuscado = prompt('Ingrese el precio del libro que desea buscar:');
+    let PrecioBuscado = parseFloat(prompt('Ingrese el precio del libro que desea buscar:'));
     let libroEncontrado = Pilalibros.find(function(libro) {
-        return libro.precio.toLowerCase() === PrecioBuscado.toLowerCase();
+        return libro.precio === PrecioBuscado;
     });
 
     if (libroEncontrado) {
         console.log('Libro encontrado:');
-        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Precio: ${libroEncontrado.precio}`);
+        console.table(`Título: ${libroEncontrado.titulo}, 
+        Autor: ${libroEncontrado.autor},
+        Idioma: ${libroEncontrado.idioma}
+        Descripcion: ${libroEncontrado.descripcion}
+        Género: ${libroEncontrado.genero},
+        Precio: ${libroEncontrado.precio},
+        Ubicacion: ${libroEncontrado.ubicacion},
+        Fecha: ${libroEncontrado.fecha_publicacion},
+        Dimensiones: ${libroEncontrado.dimensiones},
+        Peso: ${libroEncontrado.peso},
+        ISBN: ${libroEncontrado.isbn},
+        Estado: ${libroEncontrado.estado},`   
+    );
     } else {
         console.log('Libro no encontrado.');
     }
 }
 
 function BuscarPorPeso() {
-    let pesoBuscado = prompt('Ingrese el peso del libro que desea buscar (formato: YYYY-MM-DD):');
+    let pesoBuscado = prompt('Ingrese el peso del libro que desea buscar:');
     let libroEncontrado = Pilalibros.find(function(libro) {
         return libro.peso === pesoBuscado;
     });
 
     if (libroEncontrado) {
         console.log('Libro encontrado:');
-        console.table(`Título: ${libroEncontrado.titulo}, Autor: ${libroEncontrado.autor}, Género: ${libroEncontrado.genero}, Peso: ${libroEncontrado.peso}`);
+        console.table(`Título: ${libroEncontrado.titulo}, 
+        Autor: ${libroEncontrado.autor},
+        Idioma: ${libroEncontrado.idioma}
+        Descripcion: ${libroEncontrado.descripcion}
+        Género: ${libroEncontrado.genero},
+        Precio: ${libroEncontrado.precio},
+        Ubicacion: ${libroEncontrado.ubicacion},
+        Fecha: ${libroEncontrado.fecha_publicacion},
+        Dimensiones: ${libroEncontrado.dimensiones},
+        Peso: ${libroEncontrado.peso},
+        ISBN: ${libroEncontrado.isbn},
+        Estado: ${libroEncontrado.estado},` );
     } else {
         console.log('Libro no encontrado.');
     }
