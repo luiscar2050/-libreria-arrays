@@ -427,17 +427,17 @@ case 6:
 function Menu3() {
 menu = 'Menu listar libros\n\n'
 menu += '1: Mostrar por titulo / autor /editorial / precio \n'
-menu += '2: Mostrar por idioma / titulo  \n'
-menu += '3: Mostrar descripcion / titulo \n'
-menu += '4: Mostrar genero / titulo \n'
-menu += '5: Mostrar precio / titulo \n'
-menu += '6: Mostrar ubicacion / titulo \n'
-menu += '7: Mostrar fecha publicacion / titulo \n'
-menu += '8: Mostrar dimensiones / titulo \n'
-menu += '9: Mostrar peso / titulo \n'
-menu += '10: Mostrar isbn / titulo \n'
-menu += '11: Mostrar estado / titulo \n'
-menu += '12: Mostrar descuento / titulo / precio \n\n'
+menu += '2: Mostrar por idioma / titulo / autor \n'
+menu += '3: Mostrar descripcion / titulo / autor \n'
+menu += '4: Mostrar genero / titulo / autor \n'
+menu += '5: Mostrar precio / titulo / autor \n'
+menu += '6: Mostrar ubicacion / titulo / autor \n'
+menu += '7: Mostrar fecha publicacion / titulo / autor \n'
+menu += '8: Mostrar dimensiones / titulo / autor \n'
+menu += '9: Mostrar peso / titulo / autor \n'
+menu += '10: Mostrar isbn / titulo / autor \n'
+menu += '11: Mostrar estado / titulo / autor \n'
+menu += '12: Mostrar descuento / titulo / autor / editorial / precio \n\n'
 menu += 'Elije una opcion \n'
 let codigo = parseInt(prompt(menu))
 
@@ -513,14 +513,16 @@ return{
 
 const IDIOMA = Pilalibros.map(function(Pilalibros){
 return{
-    titulo: Pilalibros.titulo,
+    titulo: Pilalibros.titulo, 
+    autor: Pilalibros.autor, 
     idioma: Pilalibros.idioma
 }
 });
 
 const DESCRIPCION = Pilalibros.map(function(Pilalibros){
 return{
-    titulo: Pilalibros.titulo,
+    titulo: Pilalibros.titulo, 
+    autor: Pilalibros.autor, 
     descripcion: Pilalibros.descripcion
 }
 });
@@ -528,6 +530,7 @@ return{
 const GENERO = Pilalibros.map(function(Pilalibros){
 return{
     titulo: Pilalibros.titulo, 
+    autor: Pilalibros.autor, 
     genero: Pilalibros.genero
 }
 });
@@ -535,6 +538,7 @@ return{
 const PRECIO = Pilalibros.map(function(Pilalibros){
 return{
     titulo: Pilalibros.titulo, 
+    autor: Pilalibros.autor, 
     precio: Pilalibros.precio,
 }
 });
@@ -542,6 +546,7 @@ return{
 const UBICACION = Pilalibros.map(function(Pilalibros){
 return{
     titulo: Pilalibros.titulo, 
+    autor: Pilalibros.autor, 
     ubicacion: Pilalibros.ubicacion
 }
 });
@@ -549,6 +554,7 @@ return{
 const FECHA_PUBLICACION = Pilalibros.map(function(Pilalibros){
 return{
     titulo: Pilalibros.titulo, 
+    autor: Pilalibros.autor, 
     fecha_publicacion: Pilalibros.fecha_publicacion,
 }
 });
@@ -556,6 +562,7 @@ return{
 const DIMENSIONES = Pilalibros.map(function(Pilalibros){
 return{
     titulo: Pilalibros.titulo, 
+    autor: Pilalibros.autor, 
     dimensiones: Pilalibros.dimensiones,
 }
 });
@@ -563,6 +570,7 @@ return{
 const PESO = Pilalibros.map(function(Pilalibros){
 return{
     titulo: Pilalibros.titulo, 
+    autor: Pilalibros.autor, 
     peso: Pilalibros.peso,
 }
 });
@@ -570,6 +578,7 @@ return{
 const ISBN = Pilalibros.map(function(Pilalibros){
 return{
     titulo: Pilalibros.titulo, 
+    autor: Pilalibros.autor, 
     isbn: Pilalibros.isbn,
 }
 });
@@ -577,6 +586,7 @@ return{
 const ESTADO = Pilalibros.map(function(Pilalibros){
 return{
     titulo: Pilalibros.titulo, 
+    autor: Pilalibros.autor, 
     estado: Pilalibros.estado,
 }
 });
@@ -592,7 +602,9 @@ const DESCUENTO = Pilalibros.map(function(Pilalibros) {
 
 const DESCUENTO_PRECIO = DESCUENTO.map(function(Pilalibros) {
     return {
-        titulo: Pilalibros.titulo,
+        titulo: Pilalibros.titulo, 
+        autor: Pilalibros.autor, 
+        editorial: Pilalibros.editorial, 
         precio: Pilalibros.precio,
         descuento: Pilalibros.descuento,
     };
