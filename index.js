@@ -363,7 +363,7 @@ let nuevolibro = {
     peso : prompt('peso')
 }
 
-libros.push(nuevolibro)
+ Pilalibros.push(nuevolibro)
 console.log('libro nuevo agregado');
 console.log(nuevolibro); 
 }
