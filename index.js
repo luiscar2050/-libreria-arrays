@@ -363,7 +363,7 @@ let nuevolibro = {
     peso : prompt('peso')
 }
 
-libros.push(nuevolibro)
+Pilalibros.push(nuevolibro)
 console.log('libro nuevo agregado');
 console.log(nuevolibro); 
 }
@@ -382,9 +382,9 @@ console.log(Pilalibros);
 
 function Menu() {
 menu = 'Menu libreria\n\n'
-menu += '1: Agregar nuevo libro\n'
-menu += '2: Eliminar libro\n'
-menu += '3: Mostrar pila de libros\n'
+menu += '1: Mostrar pila de libros\n'
+menu += '2: Agregar nuevo libro\n'
+menu += '3: Eliminar libro\n'
 menu += '4: Ir al menu listar libros\n'
 menu += '5: Ir al menu resumenes libros\n'
 menu += '6: Ir al menu de busqueda de libros\n'
@@ -398,15 +398,15 @@ function EjecutarMenu() {
 let codigoMenu = Menu()
 switch (codigoMenu) {
 case 1:
-    AgregarLibro()
+    VerLibros()
     EjecutarMenu2()
     break;
 case 2:
-    EliminarLibros()
+    AgregarLibro()
     EjecutarMenu2()
     break;
 case 3:
-    VerLibros()
+    EliminarLibros()
     EjecutarMenu2()
     break;
 case 4:
@@ -826,139 +826,139 @@ default:
 function BuscarPorTitulo() {
 tituloIngresado = prompt("ingrese el titulo del libro que desea buscar")
 
-let algunlibro = Pilalibros.find((Pilalibros) => {
+let BusquedaLibro = Pilalibros.find((Pilalibros) => {
     return Pilalibros.titulo === tituloIngresado;
 });
-console.table(algunlibro);
+console.table(BusquedaLibro);
 }
 
 function BuscarPorAutor() {
 autorIngresado = prompt("ingrese el autor del libro que desea buscar")
 
-let algunlibro = Pilalibros.find((Pilalibros) => {
+let BusquedaLibro = Pilalibros.find((Pilalibros) => {
     return Pilalibros.autor === autorIngresado;
 });
-console.table(algunlibro);
+console.table(BusquedaLibro);
 }
 
 function BuscarPorFechaPublicacion() {
 fecha_publicacionIngresado = parseInt(prompt("ingrese la fecha de publicacion del libro que desea buscar"))
 
-let algunlibro = Pilalibros.find((Pilalibros) => {
+let BusquedaLibro = Pilalibros.find((Pilalibros) => {
     return Pilalibros.fecha_publicacion === fecha_publicacionIngresado;
 });
-console.table(algunlibro);
+console.table(BusquedaLibro);
 }
 
 function BuscarPorGenero() {
 generoIngresado = prompt("ingrese el genero del libro que desea buscar")
 
-let algunlibro = Pilalibros.find((Pilalibros) => {
+let BusquedaLibro = Pilalibros.find((Pilalibros) => {
     return Pilalibros.genero === generoIngresado;
 });
-console.table(algunlibro);
+console.table(BusquedaLibro);
 }
 
 function BuscarPorIdioma() {
 idiomaIngresado = prompt("ingrese el idioma del libro que desea buscar")
 
-let algunlibro = Pilalibros.find((Pilalibros) => {
+let BusquedaLibro = Pilalibros.find((Pilalibros) => {
     return Pilalibros.idioma === idiomaIngresado;
 });
-console.table(algunlibro);
+console.table(BusquedaLibro);
 }
 
 
 function BuscarPorEstado() {
 estadoIngresado = prompt("ingrese la estado del libro que desea buscar")
 
-let algunlibro = Pilalibros.find((Pilalibros) => {
+let BusquedaLibro = Pilalibros.find((Pilalibros) => {
     return Pilalibros.estado === estadoIngresado;
 });
-console.table(algunlibro);
+console.table(BusquedaLibro);
 }
 
 function BuscarPorFormato() {
 formatoIngresado = prompt("ingrese el formato del libro que desea buscar")
 
-let algunlibro = Pilalibros.find((Pilalibros) => {
+let BusquedaLibro = Pilalibros.find((Pilalibros) => {
     return Pilalibros.formato === formatoIngresado;
 });
-console.table(algunlibro);
+console.table(BusquedaLibro);
 }
 
 function BuscarPorUbicacion() {
 ubicacionIngresado = prompt("ingrese la ubicacion del libro que desea buscar")
 
-let algunlibro = Pilalibros.find((Pilalibros) => {
+let BusquedaLibro = Pilalibros.find((Pilalibros) => {
     return Pilalibros.ubicacion === ubicacionIngresado;
 });
-console.table(algunlibro);
+console.table(BusquedaLibro);
 }
 
 function BuscarPorPaginas() {
 paginasIngresado = parseInt(prompt("ingrese la paginas del libro que desea buscar"))
 
-let algunlibro = Pilalibros.find((Pilalibros) => {
+let BusquedaLibro = Pilalibros.find((Pilalibros) => {
     return Pilalibros.paginas === paginasIngresado;
 });
-console.table(algunlibro);
+console.table(BusquedaLibro);
 }
 
 function BuscarPorPeso() {
 pesoIngresado = prompt("ingrese la peso del libro que desea buscar")
 
-let algunlibro = Pilalibros.find((Pilalibros) => {
+let BusquedaLibro = Pilalibros.find((Pilalibros) => {
     return Pilalibros.peso === pesoIngresado;
 });
-console.table(algunlibro);
+console.table(BusquedaLibro);
 }
 
 function BuscarPorPrecio() {
 precioIngresado = parseFloat(prompt("ingrese el precio del libro que desea buscar"))
 
-let algunlibro = Pilalibros.find((Pilalibros) => {
+let BusquedaLibro = Pilalibros.find((Pilalibros) => {
     return Pilalibros.precio === precioIngresado;
 });
-console.table(algunlibro);
+console.table(BusquedaLibro);
 }
 
 
 function BuscarPorIsbn() {
 isbnIngresado = prompt("ingrese el isbn del libro que desea buscar")
 
-let algunlibro = Pilalibros.find((Pilalibros) => {
+let BusquedaLibro = Pilalibros.find((Pilalibros) => {
     return Pilalibros.isbn === isbnIngresado;
 });
-console.table(algunlibro);
+console.table(BusquedaLibro);
 }
 
 function BuscarPorEditorial() {
 editorialIngresado = prompt("ingrese la editorial del libro que desea buscar")
 
-let algunlibro = Pilalibros.find((Pilalibros) => {
+let BusquedaLibro = Pilalibros.find((Pilalibros) => {
     return Pilalibros.editorial === editorialIngresado;
 });
-console.table(algunlibro);
+console.table(BusquedaLibro);
 }
 
 function BuscarPorDescipcion() {
 descripcionIngresado = prompt("ingrese la descripcion del libro que desea buscar")
 
-let algunlibro = Pilalibros.find((Pilalibros) => {
+let BusquedaLibro = Pilalibros.find((Pilalibros) => {
     return Pilalibros.descripcion === descripcionIngresado;
 });
-console.table(algunlibro);
+console.table(BusquedaLibro);
 }
 
 
 function BuscarPorDimensiones() {
 dimensionesIngresado = prompt("ingrese la dimensiones del libro que desea buscar")
 
-let algunlibro = Pilalibros.find((Pilalibros) => {
+let BusquedaLibro = Pilalibros.find((Pilalibros) => {
     return Pilalibros.dimensiones === dimensionesIngresado;
 });
-console.table(algunlibro);
+console.table(BusquedaLibro);
 }
 
 //funcion para que el usuario de la opcion si desea continuar
